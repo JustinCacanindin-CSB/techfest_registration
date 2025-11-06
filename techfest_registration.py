@@ -19,3 +19,15 @@ if participant_count <= 0:
     exit()
 
 
+# Task 2: 
+
+participants = []  
+
+for i in range(participant_count):
+    name = input("Enter participant name: ")
+    track = input("Enter chosen track: ")
+    participants.append({"name": name, "track": track})
+
+print("\nRegistered Participants:")
+for index, p in enumerate(participants, start=1):
+    print(f"{index}. {p['name']} - {p['track']}")
