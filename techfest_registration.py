@@ -58,3 +58,14 @@ for person in participants:
 if not duplicate_found:
     print("\nNo duplicate names.")
     
+# Task 5: 
+
+track_summary = {}
+
+for person in participants:
+    track = person["track"]
+    track_summary[track] = track_summary.get(track, 0) + 1
+
+print("\nParticipants per track:")
+for track, count in track_summary.items():
+    print(f"{track}: {count}")
