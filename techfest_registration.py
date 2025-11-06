@@ -41,3 +41,20 @@ if len(track_set) < 2:
 else:
     print("\nTracks offered in this event:")
     print(", ".join(track_set))
+
+
+# Task 4: 
+
+seen_names = set()
+duplicate_found = False
+
+for person in participants:
+    if person["name"] in seen_names:
+        print(f"\nDuplicate name found: {person['name']}")
+        duplicate_found = True
+    else:
+        seen_names.add(person["name"])
+
+if not duplicate_found:
+    print("\nNo duplicate names.")
+    
